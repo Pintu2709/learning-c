@@ -8,4 +8,5 @@ int main()
         cumsum = cumsum + i;
     }
     printf("the cumulative sum up to 100 is %d\n", cumsum);
+    printf("the cumulative sum up to 100 is %d\n", cumsum);
 }
