@@ -1,7 +1,12 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[])
+void function_call(int i, float f)
 {
-    printf("hello world\n");
-    return 0;
+    printf("%d/n", i * f);
+}
+main()
+{
+    double d = 20;
+    float f = 10;
+    function_called(d, f);
 }
