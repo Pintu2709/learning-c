@@ -1,10 +1,16 @@
+// Program to calculate the sum of first n natural numbers
+// Positive integers 1,2,3...n are know as natural number
 #include <stdio.h>
 int main()
 {
-    int i;
-    for (i = 0; i <= 50; i = i + 5)
+    int num, count, sum = 0;
+    printf("Enter a positive integer:");
+    scanf("%d", &num);
+    // for loop terminates when num is less than count
+    for (count = 1; count <= num; ++count)
     {
-        printf("%d\n", i);
+        sum += count;
     }
+    printf("sum=%d", sum);
     return 0;
 }
