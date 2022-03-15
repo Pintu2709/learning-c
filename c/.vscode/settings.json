@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "HalfpyramidofNumbers.C": "cpp",
+    "invertedHalfPyramid.C": "cpp",
+    "FullPyramidofNumbers.C": "cpp",
+    "PascalsTringle.C": "cpp",
+    "FloydsTriangle.C": "cpp",
+    "Unitconveter.C": "cpp"
+  }
+}

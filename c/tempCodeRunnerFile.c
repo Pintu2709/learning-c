@@ -1,1 +1,1 @@
-line
+input
