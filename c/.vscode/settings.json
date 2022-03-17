@@ -5,6 +5,14 @@
     "FullPyramidofNumbers.C": "cpp",
     "PascalsTringle.C": "cpp",
     "FloydsTriangle.C": "cpp",
-    "Unitconveter.C": "cpp"
+    "Unitconveter.C": "cpp",
+    "Factorial.C": "cpp",
+    "LeapYear.C": "cpp",
+    "Palindrom.C": "cpp",
+    "FIBONACCI .C": "cpp",
+    "SWAPPING2NUM.C": "cpp",
+    "ARMSTRONGno.C": "cpp",
+    "Interestformula.C": "cpp",
+    "reverseprint.C": "cpp"
   }
 }
