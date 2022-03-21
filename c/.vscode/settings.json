@@ -13,6 +13,8 @@
     "SWAPPING2NUM.C": "cpp",
     "ARMSTRONGno.C": "cpp",
     "Interestformula.C": "cpp",
-    "reverseprint.C": "cpp"
+    "reverseprint.C": "cpp",
+    "RightAngle.C": "cpp",
+    "squareRoot.C": "cpp"
   }
 }
