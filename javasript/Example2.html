@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      .center {
+        margin: 50px;
+        /* width: 60%; */
+        border: 3px solid purple;
+        padding: 100px;
+      }
+    </style>
+
+    <script>
+      function add() {
+        var a, b, c;
+        a = Number(document.getElementById("fnum").value);
+        b = Number(document.getElementById("2ndnum").value);
+        c = a + b;
+        document.getElementById("answer").value = c;
+      }
+    </script>
+  </head>
   <body>
-    <h2>What Can JavaScript Do?</h2>
+    <div class="center">
+      <h2>Addtions two number</h2>
 
-    <p>JavaScript can change HTML attribute values.</p>
-
-    <p>
-      In this case JavaScript changes the value of the src (source) attribute of
-      an image.
-    </p>
-
-    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
-      Turn on the light
-    </button>
-
-    <img id="myImage" src="pic_bulboff.gif" style="width: 100px" />
-
-    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
-      Turn off the light
-    </button>
+      <form action="function add">
+        <label for="fnum">Enter First Number:</label><br />
+        <input type="Number" id="fnum" name="fnum" /><br /><br />
+        <label for="2ndnum">Enter Second Number:</label><br />
+        <input type="Number" id="2ndnum" name="2ndnum" /><br /><br />
+        <button onclick="add()">Add</button>
+        <input id="answer" />
+      </form>
+    </div>
   </body>
 </html>
