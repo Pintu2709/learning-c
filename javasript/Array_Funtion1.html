@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Arrays</h1>
+    <h2>My Family Name</h2>
+    <p id="demo"></p>
+
+    <script>
+      const fruits = [
+        "Ravindra pd Singh",
+        "Minta Devi",
+        "Sunita Devi",
+        "Ravi k Ranjan",
+        "Wimpy Kumari",
+        "Renu Kumari",
+        "Pintu Kumar",
+        "Sawati verma",
+        "Sloni verma",
+        "gullu ",
+        "Ankush Kumar",
+        "Ananya Verma",
+        "Banjrangi Singh",
+      ];
+
+      let text = "<ul>";
+      fruits.forEach(myFunction);
+      text += "</ul>";
+
+      document.getElementById("demo").innerHTML = text;
+      function myFunction(value) {
+        text += "<li>" + value + "</li>";
+      }
+    </script>
+  </body>
+</html>

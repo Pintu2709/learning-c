@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Sum of Polygon Angle</h2>
+    <p id="demo"></p>
+    <script>
+      function sum_polygon_angle(n) {
+        return sum_polygon_angle(n - 2) * 180;
+      }
+      document.getElementById("demo").innerHTML = sum_polygon_angle(4);
+    </script>
+  </body>
+</html>

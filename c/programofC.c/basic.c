@@ -18,6 +18,7 @@ int main()
 {
 
     int num1 = 0, num2 = 0;
+    num1 = (int)"Ravi";
     printf("Enter first numer \n");
     scanf("%i", &num1);
     printf("Enter second numer \n");

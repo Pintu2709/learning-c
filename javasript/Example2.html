@@ -4,32 +4,61 @@
     <style>
       .center {
         margin: 50px;
-        /* width: 60%; */
+
         border: 3px solid purple;
         padding: 100px;
       }
     </style>
 
     <script>
-      function add() {
-        var a, b, c;
+      let add = function sum(t) {
+        console.log(event);
+        t.preventDefault();
+        var a, b;
         a = Number(document.getElementById("fnum").value);
         b = Number(document.getElementById("2ndnum").value);
+
+        // var c;
+        // if (a % 2 == 0 && b % 2 == 0) {
+        //   c = "EVEN number";
+        // } else {
+        //   c = "1 or both are odd number";
+        // }
         c = a + b;
-        document.getElementById("answer").value = c;
-      }
+        Y(c);
+        // document.getElementById("fnum").value = null;
+        // document.getElementById("2ndnum").value = null;
+      };
+
+      var printSumResult = function (x) {
+        document.getElementById("answer").value = x;
+      };
+
+      var Y = printSumResult;
     </script>
   </head>
   <body>
     <div class="center">
       <h2>Addtions two number</h2>
 
-      <form action="function add">
+      <form onsubmit="add(event)">
         <label for="fnum">Enter First Number:</label><br />
-        <input type="Number" id="fnum" name="fnum" /><br /><br />
-        <label for="2ndnum">Enter Second Number:</label><br />
-        <input type="Number" id="2ndnum" name="2ndnum" /><br /><br />
-        <button onclick="add()">Add</button>
+        <input
+          type="Number"
+          placeholder="Enter first number"
+          id="fnum"
+          name="fnum"
+          value="15"
+        /><br /><br />
+        <label for="2ndnum">Enter second number:</label><br />
+        <input
+          type="Number"
+          placeholder="Enter second number"
+          id="2ndnum"
+          name="2ndnum"
+          value="14"
+        /><br /><br />
+        <button type="submit">Add</button>
         <input id="answer" />
       </form>
     </div>
