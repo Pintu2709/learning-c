@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <title>Page Second</title>
+  <style>
+    div {
+      background-color: azure;
+      border: 3px solid blue;
+      width: 300px;
+      padding: 80px;
+      margin: auto;
+    }
+
+    /* h3 {
+      text-align: top;
+      margin-bottom: 100px;
+    } */
+  </style>
+  <body>
+    <div>
+      <h3>Welcome</h3>
+      <span id="name_show"></span>
+    </div>
+    <button onclick="window.location.href = '/Registration_Page3.html'">
+      LOg Out
+    </button>
+
+    <script>
+      window.onload = function () {
+        const users = JSON.parse(localStorage.getItem("users"));
+        const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+        // if (!currentUser)
+        //   return (window.location.href = "/Registration_Page3.html");
+        // console.log("user", JSON.parse(user));
+        console.log(
+          'document.getElementById("name_show")==',
+          document.getElementById("name_show")
+        );
+        document.getElementById("name_show").innerHTML = user.name;
+      };
+    </script>
+  </body>
+</html>

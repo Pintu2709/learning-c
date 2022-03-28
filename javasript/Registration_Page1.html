@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <title>Registration Page</title>
+  ,
+  <!-- <script>
+    function validateForm() {
+      let x = document.form["td"]["button"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+  </script> -->
+  <style>
+    body {
+      background-color: lightcyan;
+    }
+    h1 {
+      color: red;
+      text-align: center;
+    }
+    div {
+      /* text-align: center; */
+      margin-top: 70px;
+      margin-bottom: 100px;
+      margin-right: 150px;
+      margin-left: 170px;
+    }
+  </style>
+  <body>
+    <h1>Registration page</h1>
+    <div>
+      <form id="myForm" action="Registration_Page2.html">
+        <table>
+          <tr>
+            <td>Full Name:</td>
+            <td>
+              <input type="text" id="name" value="pintu" placeholder="Enter your
+              Name"
+            </td>
+          </tr>
+          <tr>
+            <td>Email Address:</td>
+            <td>
+              <input
+                type="text"
+                placeholder=" Enter email "
+                id="email"
+                email=" "
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>password:</td>
+            <td>
+              <input type="password" id="password" placeholder=""password"
+              name="" />
+            </td>
+          </tr>
+        </table>
+        <input type="button" onclick="sigUp()" value="Sign Up" />
+      </form>
+    </div>
+    <script>
+      function sigUp() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        console.info("name: ", name);
+        console.info("email: ", email);
+        console.info("password: ", password);
+
+        const user = JSON.parse(localStorage.getItem("users")) || [];
+
+        user.push({ name, email, password });
+
+        localStorage.setItem("users", JSON.stringify(user));
+        window.location.href = "/Registration_Page2.html";
+      }
+    </script>
+  </body>
+</head>
