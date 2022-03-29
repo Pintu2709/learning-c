@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <head>
   <title>Registration Page</title>
-  ,
-  <!-- <script>
-    function validateForm() {
-      let x = document.form["td"]["button"].value;
-      if (x == "") {
-        alert("Name must be filled out");
-        return false;
-      }
-    }
-  </script> -->
+
   <style>
     body {
-      background-color: lightcyan;
+      background-color: rgb(206, 221, 221);
     }
     h1 {
       color: red;
@@ -34,10 +25,7 @@
         <table>
           <tr>
             <td>Full Name:</td>
-            <td>
-              <input type="text" id="name" value="pintu" placeholder="Enter your
-              Name"
-            </td>
+            <td><input type="text" id="name" placeholder="Enter your Name"</td>
           </tr>
           <tr>
             <td>Email Address:</td>
@@ -53,8 +41,12 @@
           <tr>
             <td>password:</td>
             <td>
-              <input type="password" id="password" placeholder=""password"
-              name="" />
+              <input
+                type="password"
+                id="password"
+                placeholder="enter password"
+                name=""
+              />
             </td>
           </tr>
         </table>
@@ -69,12 +61,29 @@
         console.info("name: ", name);
         console.info("email: ", email);
         console.info("password: ", password);
+        if (!email || !name || !password) {
+          return;
 
+        }
         const user = JSON.parse(localStorage.getItem("users")) || [];
 
         user.push({ name, email, password });
 
         localStorage.setItem("users", JSON.stringify(user));
+        localStorage.setItem(
+          "currentUser",
+          JSON.stringify({ name, email, password })
+        );
+        if (!isUserExist || !isUserExist.length) {
+          document.getElementById("showError").innerHTML =
+            "Please enter correct email and password";
+          return;
+
+
+
+
+
+
         window.location.href = "/Registration_Page2.html";
       }
     </script>

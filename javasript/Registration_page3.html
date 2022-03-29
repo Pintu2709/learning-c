@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <title>Page Third</title>
+  <style>
+    .login-conatiner {
+      background-color: #3aca59;
+      border: 3px solid blue;
+      width: 300px;
+      padding: 80px;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="login-conatiner">
+      <table>
+        <tr>
+          <td>Email Address:</td>
+          <td>
+            <input
+              type="text"
+              id="email"
+              placeholder=" Enter email "
+              email=" "
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>password:</td>
+          <td>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter password"
+              name=""
+            />
+          </td>
+        </tr>
+      </table>
+      <button
+        id="btn"
+        onclick="doLgin()"
+        window.location.href="/Registration_Page2.html"
+        ;
+      >
+        Log In
+      </button>
+
+      <button
+        id="btn"
+        onclick='window.location.href="/Registration_Page1.html"'
+      >
+        SignUp
+      </button>
+
+      <div>
+        <span style="color: red" id="showError"></span>
+      </div>
+    </div>
+
+    <script>
+      function doLgin() {
+        // const email = (document.getElementById("email").value =
+        //   "kumarpintu796@gmail.com");
+        // const password = (document.getElementById("password").value = "12345");
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        if (!email || !password) {
+          document.getElementById("showError").innerHTML =
+            "Please enter correct email and password";
+
+          return;
+        }
+        //       function validateForm(){
+        //         let x=document.forms["myForm"]["Email address "].value;
+        // let y=document.forms["myForm"][" password "].value;
+        // if (x == "kumarpintu796@gamil.com")
+        // if(y=="12345"); {
+        //   alert(winow.location.href = "/Registration_Page2.html");
+
+        console.info("email: ", email);
+        console.info("password: ", password);
+        const users = JSON.parse(localStorage.getItem("users"));
+        console.log("users: ", users);
+        if (!users) {
+          document.getElementById("showError").innerHTML =
+            "Please resiter first then login";
+          // const user = JSON.parse(localStorage.getItem("users")) || [];
+
+          // user.pop({ name, email, password });
+
+          // localStorage.setItem("users", JSON.stringify(user));
+          // window.location.href = "/Registration_Page2.html";
+
+          return;
+        }
+
+        const isUserExist = users.filter(function (user) {
+          return user.email === email && user.password === password;
+        });
+
+        if (!isUserExist || !isUserExist.length) {
+          document.getElementById("showError").innerHTML =
+            "Please enter correct email and password";
+          return;
+        }
+        const loggedUSer = isUserExist[0];
+        localStorage.setItem("currentUser", JSON.stringify(loggedUSer));
+        window.location.href = "/Registration_Page2.html";
+        // document.getElementById("btn").innerHTML= ( window.location.href = "/Registration_Page2.html");
+        //         const value=['users'];
+        //         console.log(users);
+        //         window.location.href = "/Registration_Page2.html";
+      }
+    </script>
+  </body>
+</html>

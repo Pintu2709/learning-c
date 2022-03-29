@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <title>Resiter</title>
+  <style>
+    .myForm {
+      border: 3px solid black;
+      display: block;
+      width: 350px;
+      padding: 20px;
+      margin: 10px 550px;
+    }
+    h1 {
+      text-align: center;
+      color: blue;
+    }
+    .signbtn {
+      background-color: red;
+      border-radius: 1cm;
+    }
+    table {
+      margin: 10px;
+      padding: 10px;
+      background-color: aliceblue;
+    }
+  </style>
+  <body>
+    <h1>Registration page</h1>
+    <div>
+      <form id="myForm" class="myForm" action="Registration_Page2.html">
+        <table>
+          <tr>
+            <td>Full Name:</td>
+            <td><input type="text" id="name" placeholder="Enter your Name"</td>
+          </tr>
+          <tr>
+            <td>Email Address:</td>
+            <td>
+              <input
+                type="text"
+                placeholder=" Enter email "
+                id="email"
+                email=" "
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                name=""
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                name=""
+              />
+            </td>
+          </tr>
+        </table>
+        <input
+          type="button"
+          class="signbtn"
+          onclick="sigUp()"
+          value="Sign Up"
+        />
+      </form>
+    </div>
+  </body>
+</html>

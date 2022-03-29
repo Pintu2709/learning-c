@@ -20,13 +20,15 @@
       <h3>Welcome</h3>
       <span id="name_show"></span>
     </div>
-    <button onclick="window.location.href = '/Registration_Page3.html'">
+    <button
+      onclick="localStorage.getItem('currentUser', ''), window.location.href = '/Registration_Page3.html'"
+    >
       LOg Out
     </button>
 
     <script>
       window.onload = function () {
-        const users = JSON.parse(localStorage.getItem("users"));
+        const users = JSON.parse(localStorage.getItem("user"));
         const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
         // if (!currentUser)
@@ -36,7 +38,8 @@
           'document.getElementById("name_show")==',
           document.getElementById("name_show")
         );
-        document.getElementById("name_show").innerHTML = user.name;
+        document.getElementById("name_show").innerHTML =
+          currentUser?.name || "";
       };
     </script>
   </body>
