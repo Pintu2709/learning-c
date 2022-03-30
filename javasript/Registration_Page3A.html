@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <title>Login Page</title>
+  <body>
+    <style>
+      /* style for login container */
+      .login-conatiner {
+        background-color: #97df12;
+        border: 3px solid blue;
+        width: 300px;
+        padding: 80px;
+        margin: auto;
+        color: red;
+        border-radius: 10px;
+      }
+      /* style for continer */
+      .container {
+        margin: 7px;
+        padding: auto;
+      }
+      /* style for button */
+      button {
+        background-attachment: red;
+        color: red;
+      }
+    </style>
+    <div class="login-conatiner">
+      <table>
+        <tr>
+          <td><b>Email Address:</b></td>
+          <td>
+            <input
+              type="text"
+              id="email"
+              placeholder=" Enter email "
+              email=" "
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Password:</b></td>
+          <td>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter password"
+              name=""
+            />
+          </td>
+        </tr>
+      </table>
+      <button
+        id="btn"
+        onclick="doLgin()"
+        window.location.href="/Registration_Page2.html"
+        ;
+      >
+        Log In
+      </button>
+
+      <button id="btn" onclick=
+        window.location.href="/Registration_Page1.html"' > SignUp
+      </button>
+      <tr>
+        <td>
+          <div class="container" style="background-color: #d49a9a">
+            <span class="psw"> <b>Forget</b> <a href="#">password?</a></span>
+          </div>
+        </td>
+      </tr>
+
+      <div>
+        <span style="color: red" id="showError"></span>
+      </div>
+    </div>
+    <script>
+      function doLgin() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        if (!email || !password) {
+          document.getElementById("showError").innerHTML =
+            "Please enter correct email and password";
+
+          return;
+        }
+
+        console.info("email: ", email);
+        console.info("password: ", password);
+        const users = JSON.parse(localStorage.getItem("users"));
+        console.log("users: ", users);
+        if (!users) {
+          document.getElementById("showError").innerHTML =
+            "Please resiter first then login";
+
+          return;
+        }
+
+        const isUserExist = users.filter(function (user) {
+          return user.email === email && user.password === password;
+        });
+
+        if (!isUserExist || !isUserExist.length) {
+          document.getElementById("showError").innerHTML =
+            "Please enter correct email and password";
+          return;
+        }
+        const loggedUSer = isUserExist[0];
+        localStorage.setItem("currentUser", JSON.stringify(loggedUSer));
+        window.location.href = "/Registration_Page2.html";
+      }
+    </script>
+  </body>
+</html>
