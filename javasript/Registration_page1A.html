@@ -3,11 +3,13 @@
   <title>Resiter</title>
   <style>
     .myForm {
-      border: 3px solid black;
+      border: 3px solid rgb(235, 18, 18);
+      background-color: antiquewhite;
       display: block;
       width: 350px;
       padding: 20px;
       margin: 10px 550px;
+      border-radius: 6px;
     }
     h1 {
       text-align: center;
@@ -30,7 +32,7 @@
         <table>
           <tr>
             <td>Full Name:</td>
-            <td><input type="text" id="name" placeholder="Enter your Name"</td>
+            <td><input type="text" id="name" placeholder="Enter your Name:"</td>
           </tr>
           <tr>
             <td>Email Address:</td>
@@ -55,14 +57,28 @@
             </td>
           </tr>
           <tr>
-            <td>Password:</td>
+            <td>Address:</td>
+
             <td>
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter password"
-                name=""
-              />
+              <input type="Address" placeholder="Enter Address" name="" />
+            </td>
+          </tr>
+          <tr>
+            <td>Mobile Number</td>
+            <td><input type="number" placeholder="Enter your number" /></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="gender"> Select you gender</label>
+              <select name="gender">
+                <option value="none" selected>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">other</option>
+              </select>
             </td>
           </tr>
         </table>
