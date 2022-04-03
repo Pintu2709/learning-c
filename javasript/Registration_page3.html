@@ -59,10 +59,6 @@
 
     <script>
       function doLgin() {
-        // const email = (document.getElementById("email").value =
-        //   "kumarpintu796@gmail.com");
-        // const password = (document.getElementById("password").value = "12345");
-
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         if (!email || !password) {
@@ -71,12 +67,6 @@
 
           return;
         }
-        //       function validateForm(){
-        //         let x=document.forms["myForm"]["Email address "].value;
-        // let y=document.forms["myForm"][" password "].value;
-        // if (x == "kumarpintu796@gamil.com")
-        // if(y=="12345"); {
-        //   alert(winow.location.href = "/Registration_Page2.html");
 
         console.info("email: ", email);
         console.info("password: ", password);
@@ -85,12 +75,6 @@
         if (!users) {
           document.getElementById("showError").innerHTML =
             "Please resiter first then login";
-          // const user = JSON.parse(localStorage.getItem("users")) || [];
-
-          // user.pop({ name, email, password });
-
-          // localStorage.setItem("users", JSON.stringify(user));
-          // window.location.href = "/Registration_Page2.html";
 
           return;
         }
@@ -107,10 +91,6 @@
         const loggedUSer = isUserExist[0];
         localStorage.setItem("currentUser", JSON.stringify(loggedUSer));
         window.location.href = "/Registration_Page2.html";
-        // document.getElementById("btn").innerHTML= ( window.location.href = "/Registration_Page2.html");
-        //         const value=['users'];
-        //         console.log(users);
-        //         window.location.href = "/Registration_Page2.html";
       }
     </script>
   </body>
