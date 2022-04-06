@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Tab</title>
+    <link rel="icon" href="images/Chrome-icon.png" />
+  </head>
+  <style>
+    ul {
+      list-style-type: none;
+      overflow: left;
+      margin: 0;
+      padding: 0;
+      /* display: flex; */
+    }
+    li {
+      float: left;
+    }
+    li a {
+      text-decoration: none;
+       
+      justify-content: space-around;
+      padding: 5px;
+    }
+    #nav-div {
+      display: flex;
+
+      margin-left: 82%;
+      justify-content: space-around;
+      margin-top: 1%;
+      height: 35px;
+    }
+    
+    #lastdiv {
+      display: flex;
+      font-size: 12px;
+      margin-top: 3%;
+    }
+    #lastdiv span {
+      width: 7%;
+      margin-left: 31%;
+    }
+    /*When hovered*/
+    
+    #maindiv{
+      padding: 10px;
+      width: 8cm;
+      border: 1.5px solid black;
+      border-radius: 20px;
+      text-align: center;
+    }
+    /* footer{
+      text-align: center;
+      padding: 3px;
+      margin-top: 12cm;
+      
+  
+    } */
+     
+  
+ .footer-left {
+   float: left;
+   text-align: center;
+    margin-top: 12cm;
+   /* padding-top: 10px; */
+    
+ }
+  
+ .footer-right {
+   float: right;
+   text-align: center;
+   margin-top: 12cm; 
+ }
+  </style>
+  <body>
+    <nav>
+      <div id="nav-div">
+        <a href="#" class="c">Gmail</a>
+
+        <a href="#" class="c">Images</a>
+
+        <div><button type="submit" name="button">Sign In</button></div>
+      </div>
+    </nav>
+    <main>
+      <center>
+        <img
+          src="images/googlelogo_color_272x92dp.png"
+          width="20%"
+          height="5%"
+          id="googleimg"
+        />
+        <div>
+          <div >
+             
+              <input id="maindiv"
+                type="text"
+                name="search"
+                placeholder="Search Google or type a URL"
+              />
+            </div>
+          </div>
+        </div>
+         
+        <div id="lastdiv">
+          <span>Google offered in:</span>
+          <ul>
+            <li><a href="">HINDI</a></li>
+            <li><a href=""> ENGLISH</a></li>
+            <li><a href="">MARATHI</a></li>
+            <li><a href="">TELGU</a></li>
+            <li><a href="">BANGLA</a></li>
+            <li><a href="">BHOJPURI</a></li>
+            <li><a href="">PUNJABI</a></li>
+          </ul>
+        </div>
+      </center>
+    </main>
+    <footer>
+      <ul class="footer-left">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Advertising</a></li>
+        <li><a href="#">Business</a></li>
+      </ul>
+      <ul class="footer-right">
+        <li><a href="#">How Search Words</a></li>
+        <li><a href="#">Privacy Teams</a></li>
+        <li><a href="#">Settings</a></li>
+        
+      </ul>
+    </footer>
+  </body>
+</html>
