@@ -1,0 +1,125 @@
+/* @media screen and(max-width: 1024px) 
+   */
+
+body {
+  font-family: "Source Code Pro", "monaco", "PT Mono", "Courier", monospace;
+  
+  padding-left:  10px;
+}
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+  
+}
+.E-W-Google{
+  text-decoration: none !important;
+  cursor: pointer;
+  color: inherit;
+  font-size: 14px;
+  flex-grow: 1;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+}
+header {
+  background-color: black;
+  color: white;
+  /* z-index: 1; */
+
+  width: 100%;
+  height: 2cm;
+}
+li{
+  list-style: none;
+  margin-left: 3px;
+  margin-right: 3px;
+
+}
+.btn{
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin-left: 10px;
+}
+.btn:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+#search{
+  background-color: black;
+  color: white;
+  font-size: large;
+  margin: 0 5px 0 5px;
+  border: 0.1px solid black;
+}
+
+.wrapper {
+  width: 1024px;
+  margin: auto; 
+}
+.feature_img{
+  margin-block-start: 50px;
+}
+ 
+
+.main{
+  margin-top: 2cm;
+  
+}
+#LAUNCH{
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+  border: 1px solid black;
+font-weight: 500;
+}
+#LAUNCH:hover{
+  background-color: blue;
+  color: white;
+
+}
+#btn{
+  background-color: rgba(240, 249, 255, 0.486);
+  color:  black;
+  border: 0;
+  padding: 2px;
+}
+#btn:hover{
+  background-color: silver;
+  cursor: pointer;
+}
+.Float-Right{
+  /* float: right; */
+   margin-right: 200px;
+}
+ /* @media screen and (max-width:1050px) */
+   .footer{
+     background: #000;
+     margin-block-start: 200px;
+   }
+   #social-icons{
+      float: right;
+      margin-right: 40px;
+      
+   }
+   .social-icon{
+     /* margin-left: 100px; */
+     justify-items: center;
+   }
+    
+   #google-holder{
+     color: wheat;
+     font-size: large;
+   }
+  
+   
+
+ 
+   
+  
+  
+
+ 
